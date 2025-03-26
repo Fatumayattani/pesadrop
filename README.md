@@ -57,13 +57,47 @@ graph TD
 
 ### 3. **Business Model**  
 **Revenue Streams**  
-- **SME Subscriptions**:  
-  - Basic: Free (500 tokens/month)  
-  - Pro: $10/month (unlimited tokens + HBAR cashback)  
-- **Data Insights**:  
-  - Sell anonymized spend trends to FMCGs (e.g., Unilever Kenya)  
-- **Partnerships**:  
-  - 5% fee on brand-funded airdrops (e.g., "Buy Coke, Get 50 PESA-LT")  
+### **1. SME Subscriptions** 🏪
+- **Basic Plan (Free):** 500 PESA-LT tokens/month
+- **Pro Plan ($10/month per SME):** Unlimited tokens, HBAR cashback, advanced analytics
+- **Projected Revenue:** 10,000 SMEs on Pro Plan = **$1.2M/year**
+
+### **2. Data Insights for FMCGs** 📊
+- **Selling anonymized transaction insights** to brands like Unilever & Coca-Cola
+- **Projected Revenue:** 5 FMCGs at $5,000/month = **$300K/year**
+
+### **3. Brand-Funded Airdrops** 🎯
+- Brands fund loyalty rewards (e.g., "Buy Coke, Get 50 PESA-LT")
+- Pesadrop takes **5% fee** on all brand-funded campaigns
+- **Projected Revenue:** 5% of $500K in campaigns = **$25K/year**
+
+### **4. M-Pesa ↔️ HBAR Swaps (DeFi Expansion)** 🔄
+- Enables **M-Pesa to Hedera swaps**, allowing users to cash out rewards
+- **1% transaction fee on swaps**
+- **Projected Revenue:** 1% of $10M in swaps = **$100K/year**
+
+### **5. White-Label Licensing for Banks & Telcos** 🏦
+- Licensing Pesadrop’s tech to banks and mobile money providers (e.g., Airtel Money)
+- **Projected Revenue:** 3 licensing deals at $50K each = **$150K/year**
+
+### **Total Estimated Revenue (Year 1)** 🚀
+| Revenue Stream | Annual Revenue |
+|---------------|---------------|
+| SME Subscriptions | **$1.2M** |
+| Data Insights | **$300K** |
+| Brand Airdrops | **$25K** |
+| M-Pesa ↔️ HBAR Swaps | **$100K** |
+| Licensing Deals | **$150K** |
+| **Total** | **$1.8M** 🚀 |
+
+### **Why This Works** ✅
+- **Low CAC ($15 per SME)** via USSD marketing
+- **High retention (+40%)** increases long-term revenue
+- **Scalability**: Expansion to **50,000 SMEs** could **5X revenue** ($6M+)
+- **Regulatory Compliance**: Tokens are non-securities, ensuring smooth operations
+
+Pesadrop is on track to become **Africa’s leading blockchain loyalty platform** within **3 years.**
+ 
 
 **Unit Economics (Per 100 SMEs)**  
 | Metric | Value |  
