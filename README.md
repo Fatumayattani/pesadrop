@@ -1,3 +1,4 @@
+![Pesadrop Logo](pesadrop.png)
 # Pesadrop 🌟  
 **Tokenizing Loyalty for Africa's Digital Economy**  
 *Seamlessly bridging M-Pesa and Hedera Hashgraph to empower SMEs with blockchain rewards*  
