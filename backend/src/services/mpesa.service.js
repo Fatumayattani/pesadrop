@@ -12,3 +12,4 @@ export class MpesaService {
     return await mpesa.getTransactionHistory(phone);
   }
 }
+
