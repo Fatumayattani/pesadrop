@@ -1,9 +1,8 @@
 const { HederaAgentKit } = require("hedera-agent-kit");
-const { PrivateKey } = require("@hashgraph/sdk"); // ✅ Import PrivateKey
 require("dotenv").config();
 
-// ✅ Correct private key conversion
-const privateKey = PrivateKey.fromString(process.env.HEDERA_PRIVATE_KEY);
+// ✅ Ensure Private Key is correctly formatted
+const privateKey = process.env.HEDERA_PRIVATE_KEY;
 
 const hederaAgent = new HederaAgentKit(
   process.env.HEDERA_ACCOUNT_ID,
@@ -16,6 +15,9 @@ const airdropTokens = async (req, res) => {
   try {
     const { recipient, amount, tokenId } = req.body;
 
+    console.log("📩 Airdropping tokens...");
+    console.log(`Recipient: ${recipient}, Amount: ${amount}, Token: ${tokenId}`);
+
     const result = await hederaAgent.airdropTokens({
       recipient,
       amount,
@@ -24,7 +26,7 @@ const airdropTokens = async (req, res) => {
 
     res.json({ success: true, result });
   } catch (error) {
-    console.error("Error airdropping tokens:", error);
+    console.error("❌ Airdrop Error:", error);
     res.status(500).json({ error: "Error airdropping tokens" });
   }
 };
@@ -34,6 +36,9 @@ const transferHbar = async (req, res) => {
   try {
     const { recipient, amount } = req.body;
 
+    console.log("🔄 Transferring HBAR...");
+    console.log(`Recipient: ${recipient}, Amount: ${amount}`);
+
     const result = await hederaAgent.transferHbar({
       recipient,
       amount,
@@ -41,7 +46,7 @@ const transferHbar = async (req, res) => {
 
     res.json({ success: true, result });
   } catch (error) {
-    console.error("Error transferring HBAR:", error);
+    console.error("❌ Transfer Error:", error);
     res.status(500).json({ error: "Error transferring HBAR" });
   }
 };

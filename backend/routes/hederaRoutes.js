@@ -3,7 +3,9 @@ const { airdropTokens, transferHbar } = require("../controllers/hederaController
 
 const router = express.Router();
 
-router.post("/airdrop", airdropTokens);
-router.post("/transfer", transferHbar);
+// ✅ Correct API paths
+router.post("/airdrop-tokens", airdropTokens);
+router.post("/transfer-hbar", transferHbar);
 
 module.exports = router;
+
