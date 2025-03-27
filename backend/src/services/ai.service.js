@@ -10,7 +10,7 @@ export class AIService {
     const prompt = `
     Historia ya manunuzi:
     ${JSON.stringify(transactionHistory)}
-
+    
     Tuzo inapaswa kuwa kiasi gani? (Jibu kwa JSON):
     {
       "tokens": number,
