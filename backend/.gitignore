@@ -1,0 +1,45 @@
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+debug.log
+
+# Build and compiled files
+dist/
+build/
+.cache/
+coverage/
+
+# Database files
+*.sqlite
+*.sqlite3
+db.sqlite*
+
+# Editor & OS-specific files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Testing & coverage reports
+/coverage
+/nyc_output
+/junit.xml
+
+# Docker & CI/CD
+docker-compose.override.yml
