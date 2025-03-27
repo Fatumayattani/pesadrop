@@ -15,8 +15,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Routes
-app.use("/mpesa", mpesaRoutes);
-app.use("/hedera", hederaRoutes);
+app.use("/api/mpesa", mpesaRoutes);
+app.use("/api/hedera", hederaRoutes); // ✅ Corrected API path
 
 app.get("/", (req, res) => {
   res.send("Pesadrop Backend is running...");
