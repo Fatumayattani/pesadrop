@@ -5,7 +5,7 @@ dotenv.config();
 const hedera = new HederaAgentKit(
   process.env.HEDERA_ACCOUNT_ID,
   process.env.HEDERA_PRIVATE_KEY,
-  'testnet'
+  process.env.HEDERA_NETWORK
 );
 
 export class HederaService {
