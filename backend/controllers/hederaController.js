@@ -18,7 +18,7 @@ const airdropTokens = async (req, res) => {
     console.log("📩 Airdropping tokens...");
     console.log(`Recipient: ${recipient}, Amount: ${amount}, Token: ${tokenId}`);
 
-    const result = await hederaAgent.airdropTokens({
+    const result = await hederaAgent.airdropToken({
       recipient,
       amount,
       tokenId,
