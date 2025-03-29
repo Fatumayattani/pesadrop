@@ -1,29 +1,32 @@
-import { Client, ConsensusMessageSubmitTransaction } from "@hashgraph/sdk";
+const { Client, ConsensusMessageSubmitTransaction } = require("@hashgraph/sdk");
 require("dotenv").config();
 
-// Hedera Client Setup
+// Initialize Hedera Client
 const client = Client.forTestnet();
 client.setOperator(process.env.HEDERA_ACCOUNT_ID, process.env.HEDERA_PRIVATE_KEY);
 
 // Function to execute a trade
-export async function executeTrade(req, res) {
+exports.executeTrade = async (req, res) => {
   try {
     const { tradeDetails } = req.body;
 
-    // Log trade on Hedera Consensus Service (HCS)
+    if (!tradeDetails) {
+      return res.status(400).json({ error: "Trade details are required" });
+    }
+
     const transaction = await new ConsensusMessageSubmitTransaction()
-      .setTopicId("0.0.12345") // Replace with actual topic ID
+      .setTopicId("0.0.5791423") // Replace with actual Hedera Topic ID
       .setMessage(JSON.stringify(tradeDetails))
       .execute(client);
 
     const receipt = await transaction.getReceipt(client);
 
     res.status(200).json({
-      message: "Trade executed successfully",
+      message: "✅ Trade executed successfully",
       transactionId: receipt.transactionId.toString(),
     });
   } catch (error) {
-    console.error("Trade Execution Error:", error);
-    res.status(500).json({ error: "Trade execution failed" });
+    console.error("❌ Trade Execution Error:", error);
+    res.status(500).json({ error: "Trade execution failed", details: error.message });
   }
-}
+};

@@ -1,8 +1,9 @@
-import { Router } from "express";
-const router = Router();
-import { executeTrade } from "../controllers/tradeController";
+const express = require("express");
+const router = express.Router();
+const tradeController = require("../controllers/tradeController");
 
 // Route to execute a trade
-router.post("/execute", executeTrade);
+router.post("/execute", tradeController.executeTrade);
 
-export default router;
+module.exports = router;
+

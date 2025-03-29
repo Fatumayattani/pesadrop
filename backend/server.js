@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 
 // Import and use routes
 const tradeRoutes = require("./routes/trades").default;
-app.use("/api/trades", tradeRoutes);
+app.use("/routes/trades", tradeRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
